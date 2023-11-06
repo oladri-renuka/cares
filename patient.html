@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="patient.css">
+    <title>Patient Details</title>
+</head>
+<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+		
+		#menu {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 20px;
+		}
+
+        .light-background {
+    background-color: #e21c43;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 80px; /* Adjust the height as needed */
+}
+
+/* CSS for the horizontal line */
+.horizontal-line {
+    border-top: 2px solid #e21c43;
+    width: 100%;
+    position: absolute;
+    top: 80px; /* Adjust the top position based on the new height of .light-background */
+}
+
+		/* CSS for the dropdown */
+		.dropdown-container {
+			display: inline-block;
+			position: relative;
+		}
+
+		.dropdown-container a {
+			color: #333;
+			text-decoration: none;
+			padding: 10px;
+		}
+
+		.dropdown-content {
+			display: none;
+		 position: absolute;
+		 background-color: #f9f9f9;
+		 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		 z-index: 1;
+		 min-width: 160px;
+		}
+
+		.dropdown-content a {
+			display: block;
+		 padding: 10px;
+		}
+
+		.dropdown-container:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+
+		.header-text {
+			margin: 0;
+		 padding: 20px;
+		 color: #fff;
+		 font-size: 24px;
+		}
+
+		/* Style for "CARE & CURE" text */
+		.care-cure {
+			position: absolute;
+		 top: 20px;
+		 left: 20px;
+		 color: #fff;
+		 font-size: 15px;
+
+		}
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.sex-container {
+    display: flex;
+}
+
+.sex-container input {
+    margin-right: 10px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+<body>
+	<div class="light-background"></div>
+	<div class="horizontal-line"></div>
+	<div class="care-cure">CARE <br> & <br> CURE</div>
+	<header id="menu">
+		<div class="dropdown-container">
+			<a title="Tablet Info">TABLET INFO</a>
+			<div class="dropdown-content">
+				<a href="check.html">Check</a>
+				<a href="modify.html">Modify</a>
+			</div>
+		</div>
+		<div class="dropdown-container">
+			<a href="patient.html" title="Patient Details">PATIENT DETAILS</a>
+		</div>
+		<div class="dropdown-container">
+			<a href="logout.html" title="Logout">LOGOUT</a>
+		</div>
+	</header>
+    
+    <div class="container">
+        <h2>Patient Details</h2>
+        <form id="patientForm" action="http://localhost//cloudcomputing//patient.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label>Sex:</label>
+            <div class="sex-container">
+                <input type="radio" id="male" name="sex" value="male" required>
+                <label for="male">Male</label>
+            
+                <input type="radio" id="female" name="sex" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" required>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="tabletName">Tablet Name:</label>
+            <input type="text" id="tabletName" name="tabletName" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="amountPaid">Amount Paid:</label>
+            <input type="number" id="amountPaid" name="amountPaid" required>
+
+            <button type="submt">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 CARE & CURE <br>
+          All rights reserved <br>
+          Team: Avula Jhansy, Oladri Renuka, Bodapatla Sindhu Priya, Bakka Shravya Reddy,Varanasi Vaishnavi, Mayur Jhadav</p>
+    </footer>
+    
+</body>
+</html>
